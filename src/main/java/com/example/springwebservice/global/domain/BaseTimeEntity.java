@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedBy;
+import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.Column;
@@ -22,7 +23,7 @@ public class BaseTimeEntity {
     private LocalDateTime createdAt;
 
     @JsonProperty("updated_at")
-    @LastModifiedBy
+    @LastModifiedDate
     private LocalDateTime updatedAt;
 
 }

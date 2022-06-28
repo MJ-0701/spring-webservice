@@ -16,7 +16,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class UserApiController {
     private final UserService userService;
-    
+
     @PostMapping("/save")
     public ResponseEntity<User> userSave(@RequestBody UserReqDto userReqDto){
 
@@ -35,7 +35,7 @@ public class UserApiController {
     }
 
     @PutMapping("/update/{idx}")
-    public ResponseEntity<Long> update(@PathVariable Long idx, @RequestBody UserReqDto userReqDto){
+    public ResponseEntity<User> update(@PathVariable Long idx, @RequestBody UserReqDto userReqDto){
         return ResponseEntity.ok(userService.update(idx,userReqDto));
     }
 

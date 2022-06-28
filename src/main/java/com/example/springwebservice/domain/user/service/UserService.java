@@ -41,10 +41,10 @@ public class UserService {
 
     // U
     @Transactional
-    public Long update(Long idx, UserReqDto userReqDto){
+    public User update(Long idx, UserReqDto userReqDto){
         User entity = userRepository.findById(idx).orElseThrow(() -> new IllegalArgumentException("해당 사용자가 없습니다. id =" + idx));
-        entity.update(userReqDto.getUserName(), userReqDto.getPwd(), userReqDto.getEmail());
-        return  idx;
+        return entity.update(userReqDto.getUserName(), userReqDto.getPwd(), userReqDto.getEmail());
+
 
     }
 
