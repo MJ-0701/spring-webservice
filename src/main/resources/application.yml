@@ -1,0 +1,19 @@
+spring:
+
+  # jpa 설정
+  jpa:
+    hibernate:
+      ddl-auto: 'create-drop'
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    generate-ddl: true
+    defer-datasource-initialization: true
+
+  # DB 설정
+  datasource:
+    url: jdbc:mysql://localhost:3306/spring_webservice?useSSl=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: jack
+    password: jack
