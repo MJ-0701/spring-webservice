@@ -44,8 +44,6 @@ public class UserService {
     public User update(Long idx, UserReqDto userReqDto){
         User entity = userRepository.findById(idx).orElseThrow(() -> new IllegalArgumentException("해당 사용자가 없습니다. id =" + idx));
         return entity.update(userReqDto.getUserName(), userReqDto.getPwd(), userReqDto.getEmail());
-
-
     }
 
     // D
